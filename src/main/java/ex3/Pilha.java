@@ -18,15 +18,22 @@ public class Pilha implements EstruturaDados {
             temp[i] = this.pilha[i];
         }
         this.pilha = temp;
-
+        System.out.println();
+        System.out.println("=======================================");
+        System.out.println("O nome " + pessoa + " foi adicionado.");
+        System.out.println("=======================================");
     }
 
     @Override
     public void buscar(String nome) {
         for (Pessoa pessoa : this.pilha) {
             if (pessoa.getNome().equalsIgnoreCase(nome)) {
-                System.out.println(nome);
+                System.out.println();
+                System.out.println("=======================================");
+                System.out.println("O nome buscado foi " + nome);
+                System.out.println("=======================================");
             }
+            break;
         }
     }
 
@@ -40,19 +47,31 @@ public class Pilha implements EstruturaDados {
             }
         }
         this.pilha = temp;
+        System.out.println();
+        System.out.println("=======================================");
+        System.out.println("O último nome da pilha foi removido");
+        System.out.println("=======================================");
     }
 
     @Override
     public void listarTodos() {
+        System.out.println();
+        System.out.println(">>>>>>>>>>>>>>>> LISTA <<<<<<<<<<<<<<<<");
+        System.out.println();
         for (Pessoa pessoa : this.pilha){
             if (pessoa != null){
                 System.out.println(pessoa);
             }
         }
+        System.out.println("=======================================");
     }
 
     @Override
-    public Pessoa getPessoa(int index) {
+    public Pessoa getPessoa(int index){
+        System.out.println();
+        System.out.println("=======================================");
+        System.out.println("O nome no índice " + index + " é " + this.pilha[index]);
+        System.out.println("=======================================");
         return this.pilha[index];
     }
 

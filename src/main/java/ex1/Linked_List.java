@@ -47,6 +47,10 @@ public class Linked_List implements EstruturaDados {
             node.setNext(this.head.getNext());
             this.head.setNext(node);
         }
+        System.out.println();
+        System.out.println("=======================================");
+        System.out.println("O nome " + node.getData() + " foi adicionado.");
+        System.out.println("=======================================");
     }
 
     public void adicionarInicio(Pessoa pessoa) {
@@ -56,6 +60,10 @@ public class Linked_List implements EstruturaDados {
             node.setNext(this.head);
         }
         this.head = node;
+        System.out.println();
+        System.out.println("======================================================");
+        System.out.println("O nome " + pessoa + " foi adicionado ao inicio da lista.");
+        System.out.println("=======================================+++++++++++++++");
     }
 
     public void adicionarFim(Pessoa pessoa) {
@@ -69,6 +77,10 @@ public class Linked_List implements EstruturaDados {
             }
             node.setNext(newNode);
         }
+        System.out.println();
+        System.out.println("======================================================");
+        System.out.println("O nome " + pessoa + " foi adicionado ao fim da lista.");
+        System.out.println("=======================================+++++++++++++++");
     }
 
     @Override
@@ -77,7 +89,10 @@ public class Linked_List implements EstruturaDados {
         while (node != null) {
             Pessoa pessoa = node.getData();
             if (pessoa.getNome().equalsIgnoreCase(nome)) {
-                System.out.println(pessoa);
+                System.out.println();
+                System.out.println("=======================================");
+                System.out.println("O nome buscado foi " + nome);
+                System.out.println("=======================================");
             }
             node = node.getNext();
         }
@@ -99,36 +114,51 @@ public class Linked_List implements EstruturaDados {
             previous = node;
             node = node.getNext();
         }
+        System.out.println();
+        System.out.println("=======================================");
+        System.out.println("O nome " + pessoa + " da fila foi removido");
+        System.out.println("=======================================");
     }
 
     @Override
     public void remover(int index) {
-        Pessoa pessoa  = this.getPessoa(index);
+        Pessoa pessoa = this.getPessoa(index);
         this.remover(pessoa);
+        System.out.println();
+        System.out.println("=======================================");
+        System.out.println("O nome no indice " + index + " da fila foi removido");
+        System.out.println("=======================================");
     }
 
     @Override
     public void listarTodos() {
         Node node = this.head;
+        System.out.println();
+        System.out.println(">>>>>>>>>>>>>>>> LISTA <<<<<<<<<<<<<<<<");
+        System.out.println();
         while (node != null) {
             System.out.println(node.getData());
             node = node.getNext();
         }
+        System.out.println("=======================================");
     }
 
     @Override
     public Pessoa getPessoa(int index) {
         int cont = 0;
-        Node node =this.head;
-        while(node != null){
-            if (cont == index){
+        Node node = this.head;
+        System.out.println();
+        System.out.println("=======================================");
+        while (node != null) {
+            if (cont == index) {
+                System.out.println(node.getData());
+                System.out.println("=======================================");
                 return node.getData();
             }
             cont++;
             node = node.getNext();
 
         }
-
         return null;
     }
 }

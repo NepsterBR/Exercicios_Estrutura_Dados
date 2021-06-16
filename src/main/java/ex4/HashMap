@@ -1,0 +1,52 @@
+Explique como funciona a classe HashMap do Java:
+
+***********************************************************
+Qual o objetivo?
+
+O HashMap da valor a chaves dos itens, dessa forma, não
+importa a posição do item, o que importa mesmo é o valor da
+chave. Muito utilizado em parâmetros de métodos.
+***********************************************************
+
+
+***********************************************************
+O que é hash?
+
+Hash é um algoritmo que mapeia variáveis com dados grandes,
+pequenos e de tamanho fixo. (conhecido por resumir o dado).
+***********************************************************
+
+***********************************************************
+Como ele é calculado?
+
+Utilizando os métodos:
+
+compute(K, BiFunction< K, V, V >) -- calcula o mapeamento
+para a chave especifica e o valor do mapa atual. (se não
+houver mapeamento, ela fica nula).
+
+computeIfAbsent(K, Function< K, V >) -- calcula o valor
+usando a função de mapeamento fornecida e coloca no mesmo
+mapa, a menos que seja nula (se a chave ainda não tiver
+valor ou ser nula).
+
+computeIfPresent(K, BiFunction< K, V, V>) -- Se o valor da
+chave especificada estiver presente e não for nulo,
+tenta calcular um novo mapeamento com base na chave
+e seu valor mapeado atual.
+***********************************************************
+
+***********************************************************
+Qual a diferença para HashTable?
+
+A classe HashMap é aproximadamente equivalente a Hashtable,
+exceto que não é sincronizada e permite nulos.
+***********************************************************
+
+***********************************************************
+Como funciona o método de inserção put?
+
+O método put associa um valor especifico á chave do mapa,
+se o mapa já obtinha uma chave de mapeamento,e le substituí
+por uma nova.
+***********************************************************

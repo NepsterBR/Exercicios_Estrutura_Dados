@@ -15,16 +15,24 @@ public class Fila implements EstruturaDados {
         this.tamanho++;
         var temp = new Pessoa[this.tamanho];
         for (int i = 0; i < this.fila.length; i++) {
-            temp[i] = fila[i + 1];
+            temp[i] = this.fila[i];
         }
         this.fila = temp;
+        System.out.println();
+        System.out.println("=======================================");
+        System.out.println("O nome " + pessoa + " foi adicionado.");
+        System.out.println("=======================================");
     }
 
     @Override
     public void buscar(String nome) {
         for (Pessoa pessoa : this.fila) {
             if (pessoa.getNome().equalsIgnoreCase(nome)) {
-                System.out.println(nome);
+                System.out.println();
+                System.out.println("=======================================");
+                System.out.println("O nome buscado foi " + nome);
+                System.out.println("=======================================");
+                break;
             }
         }
     }
@@ -36,19 +44,32 @@ public class Fila implements EstruturaDados {
             temp[i] = this.fila[i + 1];
         }
         this.fila = temp;
+        System.out.println();
+        System.out.println("=======================================");
+        System.out.println("O primeiro nome da fila foi removido");
+        System.out.println("=======================================");
+
     }
 
     @Override
     public void listarTodos() {
+        System.out.println();
+        System.out.println(">>>>>>>>>>>>>>>> LISTA <<<<<<<<<<<<<<<<");
+        System.out.println();
         for (Pessoa pessoa : this.fila){
             if (pessoa != null){
                 System.out.println(pessoa);
             }
         }
+        System.out.println("=======================================");
     }
 
     @Override
     public Pessoa getPessoa(int index) {
+        System.out.println();
+        System.out.println("=======================================");
+        System.out.println("O nome no índice " + index + " é " + this.fila[index]);
+        System.out.println("=======================================");
         return this.fila[index];
     }
 
