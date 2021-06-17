@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 
-public class LinkedList implements EstruturaDados {
+public class Linked_List implements EstruturaDados {
 
     private class Node {
         private Pessoa data;
