@@ -4,7 +4,7 @@ import estrutura.Pessoa;
 
 public class Demonstracao {
     public static void main(String[] args){
-        Linked_List ll = new Linked_List();
+        LinkedList ll = new LinkedList();
 
         Pessoa pessoa1 = new Pessoa("Nicolas");
 

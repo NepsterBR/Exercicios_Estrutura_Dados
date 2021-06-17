@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 
-public class Linked_List implements EstruturaDados {
+public class LinkedList implements EstruturaDados {
 
     private class Node {
         private Pessoa data;
@@ -91,7 +91,7 @@ public class Linked_List implements EstruturaDados {
             if (pessoa.getNome().equalsIgnoreCase(nome)) {
                 System.out.println();
                 System.out.println("=======================================");
-                System.out.println("O nome buscado foi " + nome);
+                System.out.println("O nome " + nome + " foi encontrado. ");
                 System.out.println("=======================================");
             }
             node = node.getNext();
