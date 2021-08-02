@@ -1,4 +1,4 @@
-package ex5;
+package selectionSort;
 
 public class Demonstracao {
     public static void main(String[] args){

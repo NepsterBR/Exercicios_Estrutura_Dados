@@ -1,4 +1,4 @@
-package ex6;
+package bubbleSort;
 
 public class BubbleSort {
     int[] array = {23, 53, 934, 34 , 1, 30, 84, 12, 3, 109};

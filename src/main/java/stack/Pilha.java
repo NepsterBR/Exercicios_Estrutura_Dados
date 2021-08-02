@@ -1,23 +1,23 @@
-package ex2;
+package stack;
 
 import estrutura.EstruturaDados;
 import estrutura.Pessoa;
 
-public class Fila implements EstruturaDados {
+public class Pilha implements EstruturaDados {
 
     private int tamanho = 1;
-    private Pessoa[] fila = new Pessoa[this.tamanho];
+    private Pessoa[] pilha = new Pessoa[this.tamanho];
 
     @Override
     public void adicionar(int index, Pessoa pessoa) {
-        int indice = this.tamanho - 1;
-        this.fila[indice] = pessoa;
+        int indice = this.tamanho -1;
+        this.pilha[indice] = pessoa;
         this.tamanho++;
         var temp = new Pessoa[this.tamanho];
-        for (int i = 0; i < this.fila.length; i++) {
-            temp[i] = this.fila[i];
+        for (int i = 0; i < this.pilha.length; i++) {
+            temp[i] = this.pilha[i];
         }
-        this.fila = temp;
+        this.pilha = temp;
         System.out.println();
         System.out.println("=======================================");
         System.out.println("O nome " + pessoa + " foi adicionado.");
@@ -26,29 +26,31 @@ public class Fila implements EstruturaDados {
 
     @Override
     public void buscar(String nome) {
-        for (Pessoa pessoa : this.fila) {
+        for (Pessoa pessoa : this.pilha) {
             if (pessoa.getNome().equalsIgnoreCase(nome)) {
                 System.out.println();
                 System.out.println("=======================================");
                 System.out.println("O nome buscado foi " + nome);
                 System.out.println("=======================================");
-                break;
             }
+            break;
         }
     }
 
-    public void removerFila(){
+    public void removerPilha(){
         this.tamanho--;
+        int diminuiTamanho = this.tamanho - 1;
         var temp = new Pessoa[this.tamanho];
         for (int i = 0; i < temp.length; i++) {
-            temp[i] = this.fila[i + 1];
+            if (i != diminuiTamanho){
+                temp[i] = this.pilha[i];
+            }
         }
-        this.fila = temp;
+        this.pilha = temp;
         System.out.println();
         System.out.println("=======================================");
-        System.out.println("O primeiro nome da fila foi removido");
+        System.out.println("O último nome da pilha foi removido");
         System.out.println("=======================================");
-
     }
 
     @Override
@@ -56,7 +58,7 @@ public class Fila implements EstruturaDados {
         System.out.println();
         System.out.println(">>>>>>>>>>>>>>>> LISTA <<<<<<<<<<<<<<<<");
         System.out.println();
-        for (Pessoa pessoa : this.fila){
+        for (Pessoa pessoa : this.pilha){
             if (pessoa != null){
                 System.out.println(pessoa);
             }
@@ -65,25 +67,22 @@ public class Fila implements EstruturaDados {
     }
 
     @Override
-    public Pessoa getPessoa(int index) {
+    public Pessoa getPessoa(int index){
         System.out.println();
         System.out.println("=======================================");
-        System.out.println("O nome no índice " + index + " é " + this.fila[index]);
+        System.out.println("O nome no índice " + index + " é " + this.pilha[index]);
         System.out.println("=======================================");
-        return this.fila[index];
+        return this.pilha[index];
     }
 
     @Override
     public void remover(Pessoa pessoa) {
-        //Em filas,
-        //Não é possível remover uma pessoa especifica,
-        //apenas a primeira.
+
     }
 
     @Override
     public void remover(int index) {
-        //Em filas,
-        //Não é possível remover um index especifico,
-        //apenas o primeiro.
+
     }
+
 }

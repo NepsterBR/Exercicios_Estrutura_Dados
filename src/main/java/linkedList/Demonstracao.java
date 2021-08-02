@@ -1,4 +1,4 @@
-package ex1;
+package linkedList;
 
 import estrutura.Pessoa;
 

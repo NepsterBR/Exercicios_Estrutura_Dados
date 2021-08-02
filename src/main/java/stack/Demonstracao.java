@@ -1,7 +1,6 @@
-package ex3;
+package stack;
 
 import estrutura.Pessoa;
-import ex2.Fila;
 
 class Demonstracao {
     public static void main(String[] args){

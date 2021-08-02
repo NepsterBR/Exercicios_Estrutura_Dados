@@ -1,4 +1,4 @@
-package ex6;
+package bubbleSort;
 
 public class Demonstracao {
     public static void main(String[] args){

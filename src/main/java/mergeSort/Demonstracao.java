@@ -1,4 +1,4 @@
-package ex7;
+package mergeSort;
 
 public class Demonstracao {
     public static void main (String[] args) {
